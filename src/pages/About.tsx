@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import AboutPic from "../assets/about_pic.png";
 import AboutDecor from "../assets/about_decor.svg";
 import GoogleIcon from "../assets/google_icon.svg";

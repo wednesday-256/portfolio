@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import LandingImage from "../assets/landing_image.png";
 import ContactSvg from "../assets/contact.svg";
 import Arrow from "../assets/arrow.svg";

@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import { useContext, useEffect } from "react";
 import { Outlet, Link, useLocation } from "react-router-dom";
 import logo from "../assets/logo2.png";
 import AboutIcon from "../assets/about_icon.svg";
