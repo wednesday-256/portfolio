@@ -1,7 +1,7 @@
 import "./App.css";
 
 //imports for page routing
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import About from "./pages/About.tsx";
 import Gallery from "./pages/Gallery.tsx";
 import Home from "./pages/Home.tsx";
@@ -12,7 +12,7 @@ import { AppContext, data } from "./AppContext.ts";
 function App() {
   return (
     <AppContext.Provider value={data}>
-      <BrowserRouter>
+      <Router>
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
@@ -21,7 +21,7 @@ function App() {
             <Route path="*" element={<NoPage />} />
           </Route>
         </Routes>
-      </BrowserRouter>
+      </Router>
     </AppContext.Provider>
   );
 }
