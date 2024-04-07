@@ -8,7 +8,7 @@ import AboutDecor2 from "../assets/about_decor2.svg";
 
 // imports for animation
 import { motion } from "framer-motion";
-import { AppContext, data } from "../AppContext";
+import { AppContext } from "../AppContext";
 
 const About = () => {
   const app_data = useContext(AppContext);
