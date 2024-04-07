@@ -54,7 +54,7 @@ const GalleryCard = ({
             animate={{ x: 0, opacity: 1 }}
             exit={{ x: 30, opacity: 0 }}
             transition={{ duration: 3, type: "spring", stiffness: 100 }}
-            className=" absolute top-0 left-0 w-full p-2  z-50"
+            className=" fixed sm:absolute top-4 sm:top-0 left-0 w-85 p-2  z-50"
           >
             <div className="flex view-box relative flex-col space-y-5 items-center mb-4 p-4 ">
               <button onClick={view_handler}>

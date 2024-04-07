@@ -61,7 +61,7 @@ const Home = () => {
 
       {/* floating about button */}
       <Link to="/About" title="About Me.">
-        <div className="absolute bottom-6 arrow_btn -rotate-90 hover:scale-125  ">
+        <div className="absolute sm:bottom-6 hidden sm:block arrow_btn -rotate-90 hover:scale-125  ">
           <img className="" src={Arrow} />
         </div>
       </Link>
