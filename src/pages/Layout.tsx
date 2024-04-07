@@ -32,12 +32,12 @@ const Layout = () => {
             <img src={logo} alt="logo image"></img>
           </Link>
         </div>
-        <div className="link_box text-Hcolor space-x-5 text-xs  xl:text-sm md:space-x-10 lg:space-x-20 ">
+        <div className="link_box text-Hcolor space-x-3 text-xs sm:space-x-5  xl:text-sm md:space-x-10 lg:space-x-20 ">
           {location.pathname.toLowerCase() === "/about" ? (
-            <p className="px-3 py-1 font-thin">About</p>
+            <p className=" px-1 sm:px-3 py-1 font-thin">About</p>
           ) : (
             <Link
-              className="neo-morph link px-3 py-1 flex items-center flex-row "
+              className="neo-morph link  px-1 sm:px-3 py-1 flex items-center flex-row "
               to="/about"
             >
               <img className="mr-2 " src={AboutIcon} />
@@ -46,10 +46,10 @@ const Layout = () => {
           )}
 
           {location.pathname.toLowerCase() === "/gallery" ? (
-            <p className="px-3 py-1 font-thin">Gallery</p>
+            <p className=" px-1 sm:px-3 py-1 font-thin">Gallery</p>
           ) : (
             <Link
-              className="neo-morph link px-3 py-1 flex items-center flex-row "
+              className="neo-morph link  px-1 sm:px-3 py-1 flex items-center flex-row "
               to="/gallery"
             >
               <img className="mr-2 " src={GalleryIcon} />
@@ -62,7 +62,7 @@ const Layout = () => {
           <a
             target="_blank"
             href={Resume}
-            className="neo-morph link px-3 py-1 flex items-center flex-row "
+            className="neo-morph link  px-1 sm:px-3 py-1 flex items-center flex-row "
           >
             <img className="mr-2 " src={ResumeIcon} />
             Resume
@@ -75,7 +75,7 @@ const Layout = () => {
               app_data.about.email +
               "?subject=Portfolio App - &body=Hello Felix, I'm reaching out about -"
             }
-            className="neo-morph link px-3 py-1 flex items-center flex-row "
+            className="neo-morph link  px-1 sm:px-3 py-1 flex items-center flex-row "
           >
             <img className="mr-2 " src={ContactIcon} />
             Contact
