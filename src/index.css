@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Ribeye&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background: url("assets/background.png") repeat-x left top fixed;
+  font-family: "Roboto";
+  background-color: #ff5f5c;
+}
