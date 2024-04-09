@@ -21,34 +21,34 @@ const About = () => {
       transition={{ duration: 2, type: "spring", stiffness: 100 }}
       className="about_box sm:flex-row flex-col  justify-center sm:item-center  sm:h-full sm:text-left sm:mt-3 flex sm:space-x-4"
     >
-      <div className="side_pane about_pic_box sm:h-full p-5 flex flex-col justify-start  w-auto sm:mt-0 mt-3">
-        <div className="p-4 neo-morph about_pic mx-auto ">
-          <img src={AboutPic} />
+      <div className="side_pane about_pic_box sm:h-100 overflow-y-clip p-5 flex flex-col justify-start  w-auto sm:mt-0 mt-3">
+        <div className="p-4   neo-morph about_pic mx-auto ">
+          <img src={AboutPic}  className="max-w-40" alt="profile headshot picture"/>
         </div>
         <div className="relative hidden sm:block ">
-          <img src={AboutDecor} className="absolute -top-10 -left-2 " />
+          <img src={AboutDecor} className="absolute -top-10 -left-2 " alt='about picture decoration' />
         </div>
-        <div className="text-4xl uppercase font-serif text-Hcolor  text-center mt-3 ">
+        <div className="text-4xl uppercase font-serif text-Hcolor  text-center mt-4 ">
           Felix
         </div>
         <div className="relative sm:mt-0 mt-3 ">
           <div className="sm:absolute static items-center sm:items-start top-24 flex  flex-col space-y-3">
             <div className="flex flex-row space-x-2 text-white font-normal text-lg">
-              <img src={GoogleIcon} />
+              <img src={GoogleIcon} alt='gmail icon'/>
               <p className="font-medium uppercase">{app_data.about.email}</p>
             </div>
             <div className="flex flex-row space-x-2 text-white font-normal text-lg">
-              <img src={GithubIcon} />
+              <img src={GithubIcon} alt='github icon'/>
               <p className="font-medium uppercase">{app_data.about.git}</p>
             </div>
             <div className="flex flex-row space-x-2 text-white font-normal text-lg">
-              <img src={LinkedInIcon} />
+              <img src={LinkedInIcon} alt='linkedin icon' />
               <p className="font-medium uppercase">{app_data.about.linked}</p>
             </div>
           </div>
         </div>
         <div className="relative hidden sm:block ">
-          <img src={AboutDecor2} className="absolute top-32 -right-2 " />
+          <img src={AboutDecor2} className="absolute top-36 -right-2 " alt='about picture decoration' />
         </div>
       </div>
       <div className="about_section p-3   capitalize flex flex-col sm:space-y-6 space-y-2 mt-2 sm:pl-4 ">

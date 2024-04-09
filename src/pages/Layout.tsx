@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { Outlet, Link, useLocation } from "react-router-dom";
 import logo from "../assets/logo2.png";
 import AboutIcon from "../assets/about_icon.svg";
@@ -15,13 +15,9 @@ const Layout = () => {
   const location = useLocation();
   const app_data = useContext(AppContext);
 
-  useEffect(() => {
-    console.log(location.pathname);
-  }, [location.pathname]);
-
   return (
     <motion.div
-      className="app_box  h-f"
+      className="app_box h-screen flex  flex-col  space-y-5"
       initial={{ y: -20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.7, ease: [0.6, -0.05, 0.01, 0.99] }}
@@ -40,7 +36,7 @@ const Layout = () => {
               className="neo-morph link  px-1 sm:px-3 py-1 flex items-center flex-row "
               to="/about"
             >
-              <img className="mr-2 " src={AboutIcon} />
+              <img className="mr-2 " src={AboutIcon}  alt="about icon"/>
               About
             </Link>
           )}
@@ -52,7 +48,7 @@ const Layout = () => {
               className="neo-morph link  px-1 sm:px-3 py-1 flex items-center flex-row "
               to="/gallery"
             >
-              <img className="mr-2 " src={GalleryIcon} />
+              <img className="mr-2 " src={GalleryIcon} alt="gallery icon" />
               Gallery
             </Link>
           )}
@@ -64,7 +60,7 @@ const Layout = () => {
             href={Resume}
             className="neo-morph link  px-1 sm:px-3 py-1 flex items-center flex-row "
           >
-            <img className="mr-2 " src={ResumeIcon} />
+            <img className="mr-2 " src={ResumeIcon} alt='resume download icon' />
             Resume
           </a>
 
@@ -77,7 +73,7 @@ const Layout = () => {
             }
             className="neo-morph link  px-1 sm:px-3 py-1 flex items-center flex-row "
           >
-            <img className="mr-2 " src={ContactIcon} />
+            <img className="mr-2 " src={ContactIcon}  alt="contact icon"/>
             Contact
           </a>
         </div>

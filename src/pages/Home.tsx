@@ -40,7 +40,7 @@ const Home = () => {
           </div>
           <div>
             <button className=" landing_btn uppercase flex p-2 items-center space-x-2 text-white text-sm lg:text-lg font-bold w-1/2 sm:w-auto  mt-2 mx-auto sm:mx-0 ">
-              <img src={ContactSvg}></img>
+              <img src={ContactSvg} alt="contact icon"></img>
               <a
                 title="d.bugger.256@gmail.com"
                 href={
@@ -55,14 +55,14 @@ const Home = () => {
           </div>
         </div>
         <div className=" landing_image_box hover:-skew-x-12 hover:scale-90 p-4  transition ease-in-out delay-150 duration-500  ">
-          <img src={LandingImage} />
+          <img src={LandingImage} alt='landing page image' />
         </div>
       </motion.div>
 
       {/* floating about button */}
       <Link to="/About" title="About Me.">
         <div className="absolute sm:bottom-6 hidden sm:block arrow_btn -rotate-90 hover:scale-125  ">
-          <img className="" src={Arrow} />
+          <img className="" src={Arrow} alt="arrow icon"/>
         </div>
       </Link>
     </>

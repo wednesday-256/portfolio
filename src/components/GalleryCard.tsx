@@ -30,10 +30,10 @@ const GalleryCard = ({
     <AnimatePresence>
       <div className="flex flex-col gallery-card ">
         <div className="top_box">
-          <img src={topPic} />
+          <img src={topPic} alt='phone mockup picture' />
         </div>
         <div className="mid_box">
-          <img src={midPic} />
+          <img src={midPic} alt='desktop desing picture '/>
         </div>
         <div className="text_box p-3 ">
           <p className="text-Hcolor font-bold text-center ">{header}</p>
@@ -45,7 +45,7 @@ const GalleryCard = ({
           onClick={view_handler}
           className="landing_btn flex flex-row  justify-center  view text-white  w-2/3 mx-auto p-1"
         >
-          <img src={ViewIcon} className="view-icon mr-1" />
+          <img src={ViewIcon} className="view-icon mr-1" alt='view icon' />
           View
         </button>
         {show ? (
@@ -64,10 +64,10 @@ const GalleryCard = ({
                 />
               </button>
               <div className="flex flex-row  justify-center">
-                <img className="w-2/5 h-fit" src={topPic} alt="" />
-                <img className=" w-1/5 " src={mobile} alt="" />
+                <img className="w-2/5 h-fit" src={topPic} alt="phone mockup design"  />
+                <img className=" w-1/5 " src={mobile} alt="mobile design" />
               </div>
-              <img className="w-5/6" src={desktop} alt="" />
+              <img className="w-5/6" src={desktop} alt="desktop design" />
             </div>
           </motion.div>
         ) : (
