@@ -13,14 +13,14 @@ const Home = () => {
 
   return (
     <>
-      <motion.div
-        initial={{ y: -40, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        exit={{ x: 30, opacity: 0 }}
-        transition={{ duration: 2, type: "spring", stiffness: 100 }}
-        className="landing_box flex sm:flex-row items-center justify-center h-full  sm:space-x-4 xl:space-x-12 flex-col-reverse sm:text-left text-center"
-      >
-        <div className="landing_text_box flex flex-col space-y-2  ">
+      <div className="landing_box flex sm:flex-row items-center justify-center h-full  sm:space-x-4 xl:space-x-12 flex-col-reverse sm:text-left text-center">
+        <motion.div
+          initial={{ x: -150, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          exit={{ y: 30, opacity: 0 }}
+          transition={{ duration: 2, type: "spring", stiffness: 100 }}
+          className="landing_text_box flex flex-col space-y-2  "
+        >
           <div className="landing_top_text lg:text-6xl sm:text-5xl text-4xl  uppercase text-Hcolor font-semibold mx-auto">
             <p>{app_data.home.top_text[0]}</p>
             <p>{app_data.home.top_text[1]}</p>
@@ -53,17 +53,24 @@ const Home = () => {
               </a>
             </button>
           </div>
-        </div>
+        </motion.div>
         <div className=" landing_image_box hover:-skew-x-12 hover:scale-90 p-4  transition ease-in-out delay-150 duration-500  ">
-          <img src={LandingImage} alt='landing page image' />
+          <img src={LandingImage} alt="landing page image" />
         </div>
-      </motion.div>
+      </div>
 
       {/* floating about button */}
       <Link to="/About" title="About Me.">
-        <div className="absolute sm:bottom-6 hidden sm:block arrow_btn -rotate-90 hover:scale-125  ">
-          <img className="" src={Arrow} alt="arrow icon"/>
-        </div>
+        <motion.div
+          initial={{ y: -40, opacity: 0 }}
+          animate={{ y: 0, opacity: 1, rotate: -90 }}
+          exit={{ x: 30, opacity: 0 }}
+          transition={{ duration: 2.5, type: "spring", stiffness: 100 }}
+          whileHover={{ scale: 1.5, transition: { duration: .5, type:"spring", stiffness:200 } }}
+          className="absolute sm:bottom-6 hidden sm:block arrow_btn    "
+        >
+          <img className="" src={Arrow} alt="arrow icon" />
+        </motion.div>
       </Link>
     </>
   );

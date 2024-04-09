@@ -21,12 +21,25 @@ const About = () => {
       transition={{ duration: 2, type: "spring", stiffness: 100 }}
       className="about_box sm:flex-row flex-col  justify-center sm:item-center  sm:h-full sm:text-left sm:mt-3 flex sm:space-x-4"
     >
-      <div className="side_pane about_pic_box sm:h-100 overflow-y-clip p-5 flex flex-col justify-start  w-auto sm:mt-0 mt-3">
+      <motion.div 
+       initial={{ y: -70, opacity: 0 }}
+       animate={{ y: 0, opacity: 1 }}
+       exit={{ x: 30, opacity: 0 }}
+       transition={{ duration: 2, type: "spring", stiffness: 100 }}
+      className="side_pane about_pic_box sm:h-100 overflow-y-clip p-5 flex flex-col justify-start  w-auto sm:mt-0 mt-3">
         <div className="p-4   neo-morph about_pic mx-auto ">
-          <img src={AboutPic}  className="max-w-40" alt="profile headshot picture"/>
+          <img
+            src={AboutPic}
+            className="max-w-40"
+            alt="profile headshot picture"
+          />
         </div>
         <div className="relative hidden sm:block ">
-          <img src={AboutDecor} className="absolute -top-10 -left-2 " alt='about picture decoration' />
+          <img
+            src={AboutDecor}
+            className="absolute -top-10 -left-2 "
+            alt="about picture decoration"
+          />
         </div>
         <div className="text-4xl uppercase font-serif text-Hcolor  text-center mt-4 ">
           Felix
@@ -34,24 +47,34 @@ const About = () => {
         <div className="relative sm:mt-0 mt-3 ">
           <div className="sm:absolute static items-center sm:items-start top-24 flex  flex-col space-y-3">
             <div className="flex flex-row space-x-2 text-white font-normal text-lg">
-              <img src={GoogleIcon} alt='gmail icon'/>
+              <img src={GoogleIcon} alt="gmail icon" />
               <p className="font-medium uppercase">{app_data.about.email}</p>
             </div>
             <div className="flex flex-row space-x-2 text-white font-normal text-lg">
-              <img src={GithubIcon} alt='github icon'/>
+              <img src={GithubIcon} alt="github icon" />
               <p className="font-medium uppercase">{app_data.about.git}</p>
             </div>
             <div className="flex flex-row space-x-2 text-white font-normal text-lg">
-              <img src={LinkedInIcon} alt='linkedin icon' />
+              <img src={LinkedInIcon} alt="linkedin icon" />
               <p className="font-medium uppercase">{app_data.about.linked}</p>
             </div>
           </div>
         </div>
         <div className="relative hidden sm:block ">
-          <img src={AboutDecor2} className="absolute top-36 -right-2 " alt='about picture decoration' />
+          <img
+            src={AboutDecor2}
+            className="absolute top-36 -right-2 "
+            alt="about picture decoration"
+          />
         </div>
-      </div>
-      <div className="about_section p-3   capitalize flex flex-col sm:space-y-6 space-y-2 mt-2 sm:pl-4 ">
+      </motion.div>
+      <motion.div
+        initial={{ y: 70, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        exit={{ x: 30, opacity: 0 }}
+        transition={{ duration: 2, type: "spring", stiffness: 100 }}
+        className="about_section p-3   capitalize flex flex-col sm:space-y-6 space-y-2 mt-2 sm:pl-4 "
+      >
         <p className="text-Hcolor sm:mt-0 mt-3 sm:text-5xl text-3xl sm:text-left text-center  font-semibold ">
           About Me
         </p>
@@ -82,7 +105,7 @@ const About = () => {
           <br />
           {app_data.about.cap_text[1]}
         </div>
-      </div>
+      </motion.div>
     </motion.div>
   );
 };

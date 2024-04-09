@@ -35,7 +35,7 @@ const GalleryCard = ({
         <div className="mid_box">
           <img src={midPic} alt='desktop desing picture '/>
         </div>
-        <div className="text_box p-3 ">
+        <div className="text_box p-3 flex flex-col justify-start mx-auto">
           <p className="text-Hcolor font-bold text-center ">{header}</p>
           <p className="text-white capitalize  px-3 text-sm text-center my-2">
             {body}

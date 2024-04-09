@@ -71,7 +71,6 @@
 
 .arrow_btn {
   left: 48%;
-  transition: all ease-in-out 0.4s;
   width: 30px;
 }
 
@@ -119,6 +118,13 @@
   backdrop-filter: blur(20px);
   /* Note: backdrop-filter has minimal browser support */
   border-radius: 40px;
+  min-height: 204px;
+  max-height: 204px;
+  min-width: 190px;
+  max-width: 190px;
+  
+
+
 }
 
 .view {
