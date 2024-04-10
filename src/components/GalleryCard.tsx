@@ -65,15 +65,15 @@ const GalleryCard = ({
                   className="rotate-90 hover:scale-125  left-4 top-16 fixed "
                 />
               </button>
-              <div className="flex flex-row  justify-center">
+              <div className="flex flex-row items-center  justify-center">
                 <img
-                  className="w-2/5 h-fit"
+                  className="w-3/6 h-fit"
                   src={topPic}
                   alt="phone mockup design"
                 />
-                <img className=" w-1/5 " src={mobile} alt="mobile design" />
+                <img className=" w-1/6 " src={mobile} alt="mobile design" />
               </div>
-              <img className="w-5/6" src={desktop} alt="desktop design" />
+              <img className="sm:w-3/5 w-4/5" src={desktop} alt="desktop design" />
             </div>
           </motion.div>
         ) : (
