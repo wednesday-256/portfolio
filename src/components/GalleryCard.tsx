@@ -29,11 +29,13 @@ const GalleryCard = ({
   return (
     <AnimatePresence>
       <div className="flex flex-col gallery-card ">
+        <img src={mobile} alt="preload assets" className="hidden" />
+        <img src={desktop} alt="preload assets" className="hidden" />
         <div className="top_box">
-          <img src={topPic} alt='phone mockup picture' />
+          <img src={topPic} alt="phone mockup picture" />
         </div>
         <div className="mid_box">
-          <img src={midPic} alt='desktop desing picture '/>
+          <img src={midPic} alt="desktop desing picture " />
         </div>
         <div className="text_box p-3 flex flex-col justify-start mx-auto">
           <p className="text-Hcolor font-bold text-center ">{header}</p>
@@ -45,7 +47,7 @@ const GalleryCard = ({
           onClick={view_handler}
           className="landing_btn flex flex-row  justify-center  view text-white  w-2/3 mx-auto p-1"
         >
-          <img src={ViewIcon} className="view-icon mr-1" alt='view icon' />
+          <img src={ViewIcon} className="view-icon mr-1" alt="view icon" />
           View
         </button>
         {show ? (
@@ -54,7 +56,7 @@ const GalleryCard = ({
             animate={{ x: 0, opacity: 1 }}
             exit={{ x: 30, opacity: 0 }}
             transition={{ duration: 3, type: "spring", stiffness: 100 }}
-            className=" fixed sm:absolute top-4 sm:top-0 left-0 w-85 p-2  z-50"
+            className=" fixed sm:absolute top-4 sm:top-0 left-0  w-full p-2  z-50"
           >
             <div className="flex view-box relative flex-col space-y-5 items-center mb-4 p-4 ">
               <button onClick={view_handler}>
@@ -64,7 +66,11 @@ const GalleryCard = ({
                 />
               </button>
               <div className="flex flex-row  justify-center">
-                <img className="w-2/5 h-fit" src={topPic} alt="phone mockup design"  />
+                <img
+                  className="w-2/5 h-fit"
+                  src={topPic}
+                  alt="phone mockup design"
+                />
                 <img className=" w-1/5 " src={mobile} alt="mobile design" />
               </div>
               <img className="w-5/6" src={desktop} alt="desktop design" />

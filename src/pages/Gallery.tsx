@@ -15,7 +15,7 @@ const Gallery = () => {
         animate={{ x: 0, opacity: 1 }}
         exit={{ y: 30, opacity: 0 }}
         transition={{ duration: 2, type: "spring", stiffness: 100 }}
-      className="text-Hcolor  mt-4 mb-8 sm:text-5xl text-3xl  text-center  font-semibold ">
+      className="text-Hcolor sticky top-12 z-50  mt-4 mb-8 sm:text-5xl text-3xl  text-center  font-semibold ">
         Gallery
       </motion.p>
       <motion.div
