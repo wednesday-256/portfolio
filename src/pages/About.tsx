@@ -21,12 +21,13 @@ const About = () => {
       transition={{ duration: 2, type: "spring", stiffness: 100 }}
       className="about_box sm:flex-row flex-col  justify-center sm:item-center  sm:h-full sm:text-left sm:mt-3 flex sm:space-x-4"
     >
-      <motion.div 
-       initial={{ y: -70, opacity: 0 }}
-       animate={{ y: 0, opacity: 1 }}
-       exit={{ x: 30, opacity: 0 }}
-       transition={{ duration: 2, type: "spring", stiffness: 100 }}
-      className="side_pane about_pic_box sm:h-100 overflow-y-clip p-5 flex flex-col justify-start  w-auto sm:mt-0 mt-3">
+      <motion.div
+        initial={{ y: -70, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        exit={{ x: 30, opacity: 0 }}
+        transition={{ duration: 2, type: "spring", stiffness: 100 }}
+        className="side_pane about_pic_box sm:h-100 overflow-y-clip p-5 flex flex-col justify-start  w-auto sm:mt-0 mt-3"
+      >
         <div className="p-4   neo-morph about_pic mx-auto ">
           <img
             src={AboutPic}
@@ -45,16 +46,16 @@ const About = () => {
           Felix
         </div>
         <div className="relative sm:mt-0 mt-3 ">
-          <div className="sm:absolute static items-center sm:items-start top-24 flex  flex-col space-y-3">
-            <div className="flex flex-row space-x-2 text-white font-normal text-lg">
+          <div className="sm:absolute static items-start top-20 flex p-2  flex-col space-y-4">
+            <div className="flex flex-row space-x-2 text-white font-normal ">
               <img src={GoogleIcon} alt="gmail icon" />
               <p className="font-medium uppercase">{app_data.about.email}</p>
             </div>
-            <div className="flex flex-row space-x-2 text-white font-normal text-lg">
+            <div className="flex flex-row space-x-2 text-white font-normal ">
               <img src={GithubIcon} alt="github icon" />
               <p className="font-medium uppercase">{app_data.about.git}</p>
             </div>
-            <div className="flex flex-row space-x-2 text-white font-normal text-lg">
+            <div className="flex flex-row space-x-2 text-white font-normal ">
               <img src={LinkedInIcon} alt="linkedin icon" />
               <p className="font-medium uppercase">{app_data.about.linked}</p>
             </div>
@@ -63,7 +64,7 @@ const About = () => {
         <div className="relative hidden sm:block ">
           <img
             src={AboutDecor2}
-            className="absolute top-36 -right-2 "
+            className="absolute top-32 -right-2 "
             alt="about picture decoration"
           />
         </div>
