@@ -1,4 +1,8 @@
 import { createContext } from "react";
+
+import LandingImage from "./assets/landing_image.png";
+
+import AboutPic from "./assets/about_pic.png";
 import AdminMock from "./assets/admin_mockup.png";
 import AdminMobile from "./assets/admin_mobile.png";
 import AdminDesktop from "./assets/admin_desktop.png";
@@ -16,6 +20,7 @@ import GymMid from "./assets/gym_mid.png";
 
 const data = {
   home: {
+    landing_image: LandingImage,
     top_text: ["Transforming", "ideas into", "reality"],
     mid_text: "Design, develop, deploy.",
     low_text: [
@@ -26,6 +31,7 @@ const data = {
     cap_text: ["Let's embark on this transformative", "journey together."],
   },
   about: {
+    about_pic: AboutPic,
     email: "d.bugger.256@gmail.com",
     git: "@wednesday-256",
     linked: "@wednesday256",
@@ -44,8 +50,14 @@ const data = {
       " Believe in collaboration and fostering positive working relationships.",
       "Dedicated to delivering excellence in every project. ",
     ],
-    work:["Focus on understanding client needs and exceeding expectations.", "Dedicated to quality, efficiency, and continuous improvement." ],
-    cap_text: [" With passion, creativity, and dedication, I'm here to turn your ideas into reality", "Let's embark on this journey together!"]
+    work: [
+      "Focus on understanding client needs and exceeding expectations.",
+      "Dedicated to quality, efficiency, and continuous improvement.",
+    ],
+    cap_text: [
+      " With passion, creativity, and dedication, I'm here to turn your ideas into reality",
+      "Let's embark on this journey together!",
+    ],
   },
   gallery: [
     {

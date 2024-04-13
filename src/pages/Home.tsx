@@ -1,5 +1,4 @@
 import { useContext } from "react";
-import LandingImage from "../assets/landing_image.png";
 import ContactSvg from "../assets/contact.svg";
 import Arrow from "../assets/arrow.svg";
 import { Link } from "react-router-dom";
@@ -55,7 +54,7 @@ const Home = () => {
           </div>
         </motion.div>
         <div className=" landing_image_box hover:-skew-x-12 hover:scale-90 p-4  transition ease-in-out delay-150 duration-500  ">
-          <img src={LandingImage} alt="landing page image" />
+          <img src={app_data.home.landing_image} alt="landing page image" />
         </div>
       </div>
 
@@ -66,7 +65,10 @@ const Home = () => {
           animate={{ y: 0, opacity: 1, rotate: -90 }}
           exit={{ x: 30, opacity: 0 }}
           transition={{ duration: 2.5, type: "spring", stiffness: 100 }}
-          whileHover={{ scale: 1.5, transition: { duration: .5, type:"spring", stiffness:200 } }}
+          whileHover={{
+            scale: 1.5,
+            transition: { duration: 0.5, type: "spring", stiffness: 200 },
+          }}
           className="absolute sm:bottom-6 hidden sm:block arrow_btn    "
         >
           <img className="" src={Arrow} alt="arrow icon" />

@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import AboutPic from "../assets/about_pic.png";
+
 import AboutDecor from "../assets/about_decor.svg";
 import GoogleIcon from "../assets/google_icon.svg";
 import LinkedInIcon from "../assets/linkedin_icon.svg";
@@ -30,7 +30,7 @@ const About = () => {
       >
         <div className="p-4   neo-morph about_pic mx-auto ">
           <img
-            src={AboutPic}
+            src={app_data.about.about_pic}
             className="max-w-40"
             alt="profile headshot picture"
           />

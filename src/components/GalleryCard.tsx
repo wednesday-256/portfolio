@@ -29,8 +29,6 @@ const GalleryCard = ({
   return (
     <AnimatePresence>
       <div className="flex flex-col gallery-card ">
-        <img src={mobile} alt="preload assets" className="hidden" />
-        <img src={desktop} alt="preload assets" className="hidden" />
         <div className="top_box">
           <img src={topPic} alt="phone mockup picture" />
         </div>
@@ -73,7 +71,11 @@ const GalleryCard = ({
                 />
                 <img className=" w-1/6 " src={mobile} alt="mobile design" />
               </div>
-              <img className="sm:w-3/5 w-4/5" src={desktop} alt="desktop design" />
+              <img
+                className="sm:w-3/5 w-4/5"
+                src={desktop}
+                alt="desktop design"
+              />
             </div>
           </motion.div>
         ) : (

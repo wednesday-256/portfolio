@@ -10,4 +10,5 @@ body {
   background: url("assets/background.png") repeat-x left top fixed;
   font-family: "Roboto";
   background-color: #ff5f5c;
+  min-height: 100vh;
 }

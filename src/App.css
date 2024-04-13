@@ -1,4 +1,3 @@
-
 .app_box {
   max-width: 93%;
   min-width: 93%;
@@ -122,9 +121,6 @@
   max-height: 204px;
   min-width: 190px;
   max-width: 190px;
-  
-
-
 }
 
 .view {
@@ -154,6 +150,14 @@
   width: 30px;
 }
 
+.loading_box {
+  background: rgba(79, 135, 146, 0.5);
+  box-shadow: inset 0px 4px 10px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(20px);
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 60px;
+}
+
 /* Effectcs */
 .neo-morph {
   background: #2c3e50;
@@ -168,6 +172,38 @@
   box-shadow: inset 0px 4px 500px rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(40px);
   /* Note: backdrop-filter has minimal browser support */
+}
+
+.load-text {
+  -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.61, 0.355, 1)
+    both;
+  animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+}
+
+@-webkit-keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 /* scrollbar styles  */
