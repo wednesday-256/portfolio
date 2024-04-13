@@ -1,4 +1,4 @@
-import { useContext, useEffect, useRef, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Outlet, Link, useLocation } from "react-router-dom";
 import logo from "../assets/logo2.png";
 import AboutIcon from "../assets/about_icon.svg";
@@ -40,10 +40,9 @@ const Layout = () => {
 
       img.addEventListener(
         "load",
-        (e: Event) => {
-          !count.includes(e.target?.src)
-            ? setCount(count.concat([e.target.src]))
-            : "";
+        (e) => {
+          const image = e.target as HTMLImageElement;
+          !count.includes(image.src) ? setCount(count.concat([image.src])) : "";
 
           if (count.length === src_array.length) {
             setLoading(false);
