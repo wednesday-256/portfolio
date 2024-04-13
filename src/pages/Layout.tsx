@@ -13,27 +13,46 @@ import Loading from "./Loading";
 import { motion } from "framer-motion";
 import { AppContext } from "../AppContext";
 
-let count = 0;
-
 const Layout = () => {
   const location = useLocation();
   const app_data = useContext(AppContext);
-  const [loading, setLoading] = useState(true);
-  const img_container = useRef<HTMLDivElement>(null);
+  const [loading, setLoading] = useState<boolean>(true);
+  const [count, setCount] = useState<string[]>([]);
+
+  let src_array: string[] = [
+    app_data.home.landing_image,
+    app_data.about.about_pic,
+    Background,
+  ];
+
+  app_data.gallery.forEach((obj) => {
+    src_array = src_array.concat([
+      obj.midPic,
+      obj.mobile,
+      obj.topPic,
+      obj.desktop,
+    ]);
+  });
 
   useEffect(() => {
-    const img_arr = img_container.current?.querySelectorAll("img");
-    img_arr?.forEach((obj) => {
-      obj.addEventListener(
+    src_array.forEach((obj: string) => {
+      const img = new Image();
+
+      img.addEventListener(
         "load",
-        () => {
-          count++;
-          if (count === img_container.current?.querySelectorAll("img").length) {
+        (e: Event) => {
+          !count.includes(e.target?.src)
+            ? setCount(count.concat([e.target.src]))
+            : "";
+
+          if (count.length === src_array.length) {
             setLoading(false);
           }
         },
         { once: true }
       );
+
+      img.src = obj;
     });
   });
 
@@ -126,7 +145,7 @@ const Layout = () => {
       ) : (
         ""
       )}
-      <div className="hidden" ref={img_container}>
+      {/* <div className="hidden" ref={img_container}>
         <img src={app_data.home.landing_image} alt="preload assests" />
         <img src={app_data.about.about_pic} alt="preload assests" />
         <img src={Background} alt="preload assets" />
@@ -139,7 +158,7 @@ const Layout = () => {
             <img src={obj.desktop} alt="preload assests" />
           </div>
         ))}
-      </div>
+      </div> */}
     </motion.div>
   );
 };
