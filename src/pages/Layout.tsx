@@ -28,10 +28,7 @@ const Layout = () => {
         "load",
         () => {
           count++;
-          if (
-            count / 2 ===
-            img_container.current?.querySelectorAll("img").length
-          ) {
+          if (count === img_container.current?.querySelectorAll("img").length) {
             setLoading(false);
           }
         },
