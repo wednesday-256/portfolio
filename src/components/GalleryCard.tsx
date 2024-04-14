@@ -5,6 +5,7 @@ import ArrowBtn from "../assets/arrow.svg";
 
 // imports for animation
 import { AnimatePresence, motion } from "framer-motion";
+import ImageCarousel from "./ImageCarousel";
 
 const GalleryCard = ({
   topPic,
@@ -28,7 +29,7 @@ const GalleryCard = ({
   };
   return (
     <AnimatePresence>
-      <div className="flex flex-col gallery-card ">
+      <div className="flex flex-col gallery-card sm:mx-0 mx-auto ">
         <div className="top_box">
           <img src={topPic} alt="phone mockup picture" />
         </div>
@@ -54,28 +55,37 @@ const GalleryCard = ({
             animate={{ x: 0, opacity: 1 }}
             exit={{ x: 30, opacity: 0 }}
             transition={{ duration: 3, type: "spring", stiffness: 100 }}
-            className=" fixed sm:absolute top-4 sm:top-0 left-0  w-full p-2  z-50"
+            className=" fixed sm:absolute top-4 sm:-top-8 left-0  w-full p-2  z-50"
           >
-            <div className="flex view-box relative flex-col space-y-5 items-center mb-4 p-4 ">
+            <div className="view-box relative z-50 p-3 w-full ">
               <button onClick={view_handler}>
                 <img
                   src={ArrowBtn}
-                  className="rotate-90 hover:scale-125  left-4 top-16 fixed "
+                  className="rotate-90 hover:scale-125  z-50 left-7 top-10 fixed "
                 />
               </button>
-              <div className="flex flex-row items-center  justify-center">
+              <div className="sm:flex hidden flex-row items-center  justify-center">
                 <img
-                  className="w-3/6 h-fit"
+                  className=" "
                   src={topPic}
                   alt="phone mockup design"
                 />
-                <img className=" w-1/6 " src={mobile} alt="mobile design" />
+                <img className=" h-1/2  " src={mobile} alt="mobile design" />
               </div>
               <img
-                className="sm:w-3/5 w-4/5"
+                className="mx-auto mt-3 sm:block hidden"
                 src={desktop}
                 alt="desktop design"
               />
+              <div className="sm:hidden block">
+
+              <ImageCarousel
+                images={[topPic, mobile, desktop].map((obj, key) => (
+                  <img className="mx-auto  mt-24 gallery_image" key={key} src={obj} />
+                ))}
+              />
+              </div>
+
             </div>
           </motion.div>
         ) : (

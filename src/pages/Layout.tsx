@@ -144,20 +144,6 @@ const Layout = () => {
       ) : (
         ""
       )}
-      {/* <div className="hidden" ref={img_container}>
-        <img src={app_data.home.landing_image} alt="preload assests" />
-        <img src={app_data.about.about_pic} alt="preload assests" />
-        <img src={Background} alt="preload assets" />
-
-        {app_data.gallery.map((obj, idx) => (
-          <div key={idx}>
-            <img src={obj.midPic} alt="preload assests" />
-            <img src={obj.mobile} alt="preload assests" />
-            <img src={obj.topPic} alt="preload assests" />
-            <img src={obj.desktop} alt="preload assests" />
-          </div>
-        ))}
-      </div> */}
     </motion.div>
   );
 };
