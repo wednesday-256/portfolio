@@ -7,8 +7,8 @@
 }
 
 .logo_box img {
-  width: 30px;
-  height: 30px;
+  width:2rem ;
+  height: 1.5rem;
   border-radius: 50px;
 }
 
@@ -19,7 +19,7 @@
 }
 
 .logo_box {
-  border-radius: 30px;
+  border-radius: 3rem;
 }
 
 .link_box {
