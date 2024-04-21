@@ -126,10 +126,10 @@
 .view {
   transform: translateY(-60px);
   border-radius: 0 0px 20px 20px;
+  transition: all ease-in-out 0.5s;
 }
 .view:hover {
   border-radius: 0 0 40px 40px;
-  transition: all ease-in-out 0.5s;
 }
 .view-box {
   letter-spacing: 0.02em;

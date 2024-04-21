@@ -65,7 +65,7 @@ const Layout = () => {
       {!loading ? (
         <>
           <div className="header_box pt-2 sticky top-0 z-50 ">
-            <div className="logo_box p-1 neo-morph">
+            <div className="logo_box p-2 neo-morph">
               <Link to="/">
                 <img src={logo} alt="logo image"></img>
               </Link>

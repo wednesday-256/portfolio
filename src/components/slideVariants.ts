@@ -2,11 +2,13 @@ const slideVariants = {
   hiddenRight: {
     x: 100,
     opacity: 0,
+    minWidth: "100%"
+
   },
   hiddenLeft: {
     x: -100,
     opacity: 0,
-    minWidth: "100%"
+    minWidth: "100%",
   },
   visible: {
     x: 0,
