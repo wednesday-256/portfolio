@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { Outlet, Link, useLocation } from "react-router-dom";
-import logo from "../assets/logo2.png";
+import logo from "../assets/logo3.png";
 import AboutIcon from "../assets/about_icon.svg";
 import GalleryIcon from "../assets/gallery_icon.svg";
 import ResumeIcon from "../assets/resume_icon.svg";
@@ -65,7 +65,7 @@ const Layout = () => {
       {!loading ? (
         <>
           <div className="header_box pt-2 sticky top-0 z-50 ">
-            <div className="logo_box p-2 neo-morph">
+            <div className="logo_box p-2 neo-morph sm:scale-125">
               <Link to="/">
                 <img src={logo} alt="logo image"></img>
               </Link>
