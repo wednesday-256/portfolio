@@ -26,7 +26,7 @@ const Loading = () => {
               repeat: Infinity,
               ease: "easeIn",
               repeatType: "reverse",
-              repeatDelay: 0,
+              repeatDelay: 0.17,
             }}
           />
         </svg>

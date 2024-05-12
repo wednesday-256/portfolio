@@ -12,13 +12,14 @@ const Home = () => {
 
   return (
     <>
-      <div className="landing_box flex sm:flex-row items-center justify-center h-full  sm:space-x-4 xl:space-x-12 flex-col-reverse sm:text-left text-center">
+      <div className="landing_box flex sm:flex-row items-center justify-end sm:justify-center items-center h-full  sm:space-x-4 xl:space-x-12 flex-col-reverse sm:text-left text-center">
         <motion.div
           initial={{ x: -150, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           exit={{ y: 30, opacity: 0 }}
           transition={{ duration: 2, type: "spring", stiffness: 100 }}
           className="landing_text_box flex flex-col space-y-2  "
+          layout
         >
           <div className="landing_top_text lg:text-6xl sm:text-5xl text-4xl  uppercase text-Hcolor font-semibold mx-auto">
             <p>{app_data.home.top_text[0]}</p>
@@ -53,13 +54,13 @@ const Home = () => {
             </button>
           </div>
         </motion.div>
-        <div className=" landing_image_box hover:-skew-x-12 hover:scale-90 p-4  transition ease-in-out delay-150 duration-500  ">
+        <div className=" landing_image_box scale-75 sm:scale-100 align-top hover:-skew-x-12 hover:scale-90 p-0 sm:p-4  transition ease-in-out delay-150 duration-500  ">
           <img src={app_data.home.landing_image} alt="landing page image" />
         </div>
       </div>
 
       {/* floating about button */}
-      <Link to="/About" title="About Me.">
+      <Link to="/about" title="About Me.">
         <motion.div
           initial={{ y: -40, opacity: 0 }}
           animate={{ y: 0, opacity: 1, rotate: -90 }}
